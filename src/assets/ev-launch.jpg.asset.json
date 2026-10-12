@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "66fbbb45-cbb7-4dfe-8c7f-0bbaba0dc5ab",
-  "project_id": "0676f055-33f8-4bf7-ac6e-d69eebab3d57",
-  "url": "/__l5e/assets-v1/66fbbb45-cbb7-4dfe-8c7f-0bbaba0dc5ab/ev-launch.jpg",
-  "r2_key": "a/v1/0676f055-33f8-4bf7-ac6e-d69eebab3d57/66fbbb45-cbb7-4dfe-8c7f-0bbaba0dc5ab/ev-launch.jpg",
-  "original_filename": "ev-launch.jpg",
-  "size": 125100,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T08:07:07Z"
+  "created_at": "2026-10-12T08:07:07Z",
+  "original_filename": "ev-launch.jpg",
+  "project_id": "fc939a36-56ec-4ee1-9cf7-4b0e57c10b84",
+  "r2_key": "a/v1/fc939a36-56ec-4ee1-9cf7-4b0e57c10b84/66fbbb45-cbb7-4dfe-8c7f-0bbaba0dc5ab/ev-launch.jpg",
+  "size": 125100,
+  "url": "/__l5e/assets-v1/66fbbb45-cbb7-4dfe-8c7f-0bbaba0dc5ab/ev-launch.jpg",
+  "version": 1
 }
