@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import reference from "@/lib/reference-pages.json";
 
 export type ReferencePage = keyof typeof reference.pages;
-const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management", "page?about-management": "/scientists", "page?about-business-collaboration": "/business-collaboration", "page?about-business-opportunity": "/business-opportunity", "page?about-award": "/awards", "page?about-milestones": "/milestones", "page?p-triple-stemcell-h2o-moisturizer": "/triple-stemcell-h2o", "page?p-double-stemcell": "/double-stemcell", "page?p-crystal-cell": "/crystal-cell", "page?p-videos": "/product-videos", "page?p-certificate": "/halal-certificates", "page?p-halal": "/halal-certificates", "page?halal-certificates": "/halal-certificates", "page?photo-gallery": "/photo-gallery", "page?video-gallery": "/video-gallery", "page?events": "/news-events", "page?event-upcoming": "/latest-event" } as const;
+const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management", "page?about-management": "/scientists", "page?about-business-collaboration": "/business-collaboration", "page?about-business-opportunity": "/business-opportunity", "page?about-award": "/awards", "page?about-milestones": "/milestones", "page?p-triple-stemcell-h2o-moisturizer": "/triple-stemcell-h2o", "page?p-double-stemcell": "/double-stemcell", "page?p-crystal-cell": "/crystal-cell", "page?p-videos": "/product-videos", "page?p-certificate": "/halal-certificates", "page?p-halal": "/halal-certificates", "page?halal-certificates": "/halal-certificates", "page?photo-gallery": "/photo-gallery", "page?video-gallery": "/video-gallery", "page?events": "/news-events", "page?event-upcoming": "/latest-event", "page?faq-general": "/faq-general", "page?faq-product": "/faq-product", "page?faq-good-policy": "/faq-return-goods", "page?contact": "/contact", "page?contact-business-center": "/business-center" } as const;
 
 export function pageHead(page: ReferencePage) {
   const { title, description } = reference.pages[page];
@@ -20,6 +20,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
   const [expanded, setExpanded] = useState("accordion1-card-body-bprghjla");
   const [notice, setNotice] = useState<string>();
   const [tab, setTab] = useState("#home");
+  const [panel, setPanel] = useState("collapseOne");
   const options: HTMLReactParserOptions = {
     replace(node, index) {
       if (!(node instanceof Element)) return;
@@ -41,6 +42,8 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       if (cls.includes("rd-navbar-nav-wrap")) return <div className={`${cls} ${menu ? "mobile-open" : ""}`}>{children()}</div>;
       if (cls === "dropdown-menu") return <div className={`${cls} ${language ? "show" : ""}`}>{children()}</div>;
       if (cls.includes("rd-nav-item")) return <li className={cls.replace(/active/g, "") + (header ? "" : "")}>{children()}</li>;
+      if (cls.includes("panel-collapse")) return <div id={attrs["id"]} className={`panel-collapse collapse ${attrs["id"] && panel === attrs["id"] ? "show" : ""}`}>{children()}</div>;
+      if (node.name === "form" && cls.includes("contactForm")) return <form className={cls} onSubmit={e => e.preventDefault()}>{children()}</form>;
       if (node.name === "form") return <form className="reference-search" action="https://iphyto.com/search" method="post">{children()}</form>;
       if (cls.includes("carousel-item")) {
         const siblings = node.parent?.children.filter(n => n instanceof Element && n.attribs["class"]?.includes("carousel-item")) ?? [];
@@ -52,6 +55,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       if (cls.includes("collapse") && attrs["id"]?.startsWith("accordion1-card-body")) return <div id={attrs["id"]} className={`collapse ${expanded === attrs["id"] ? "show" : ""}`}>{children()}</div>;
       if (node.name === "a") {
         const href = attrs["href"] ?? "#";
+        if (href.startsWith("#collapse")) { const id = href.slice(1); return <a href={href} className={`${cls} ${panel === id ? "" : "collapsed"}`} aria-expanded={panel === id} onClick={e => { e.preventDefault(); setPanel(panel === id ? "" : id); }}>{children()}</a>; }
         if (href in localPages) return <Link className={cls} to={localPages[href as keyof typeof localPages]}>{children()}</Link>;
         if (attrs["data-target"]?.startsWith(".annoucement")) return <a href="#" className={cls} onClick={e => { e.preventDefault(); const find = (ns: DOMNode[]): Element | undefined => { for (const n of ns) { if (n instanceof Element) { if (n.name === "img") return n; const r = find(n.children as DOMNode[]); if (r) return r; } } return undefined; }; const img = find(node.children as DOMNode[]); if (img) setNotice(img.attribs["src"]); }}>{children()}</a>;
         if (cls.includes("carousel-control")) return <Button variant="reference" size="reference" className={cls} aria-label={cls.includes("prev") ? "Previous announcement" : "Next announcement"} onClick={() => setAnnouncement((announcement + (cls.includes("prev") ? 9 : 1)) % 10)}>{children()}</Button>;
