@@ -6,3 +6,4 @@
 - [x] Rewrite every page section with Life OS-specific labels, descriptions and sample data.
 - [ ] Verify every route on phone, tablet and desktop; fix all overflow and interaction issues.
 - [ ] Audit all media dimensions and improve low-resolution Life OS media without changing the original layout.
+- [ ] Replace merely enlarged photos with individually generated detailed Life OS photographs following the original media themes; no SVG replacements.
