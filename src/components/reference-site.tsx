@@ -4,6 +4,17 @@ import parse, { domToReact, Element, type DOMNode, type HTMLReactParserOptions }
 import { Button } from "@/components/ui/button";
 import reference from "@/lib/reference-pages.json";
 
+// Resolve every generated Life OS media token (lifeos-media://group/nn) to its bundled image URL.
+const lifeosTiles = import.meta.glob<{ default: string }>("/src/assets/lifeos/generated/*.webp", { eager: true });
+const lifeosMedia = new Map<string, string>();
+for (const [path, mod] of Object.entries(lifeosTiles)) {
+  const m = path.match(/generated\/([a-z]+)-(\d+)\.webp$/);
+  if (m) lifeosMedia.set(`${m[1]}/${Number(m[2])}`, mod.default);
+}
+function resolveMedia(html: string): string {
+  return html.replace(/lifeos-media:\/\/([a-z]+)\/(\d{2})/g, (match, group, nn) => lifeosMedia.get(`${group}/${Number(nn)}`) ?? match);
+}
+
 export type ReferencePage = keyof typeof reference.pages;
 const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management", "page?about-management": "/scientists", "page?about-business-collaboration": "/business-collaboration", "page?about-business-opportunity": "/business-opportunity", "page?about-award": "/awards", "page?about-milestones": "/milestones", "page?p-triple-stemcell-h2o-moisturizer": "/triple-stemcell-h2o", "page?p-double-stemcell": "/double-stemcell", "page?p-crystal-cell": "/crystal-cell", "page?p-videos": "/product-videos", "page?p-certificate": "/halal-certificates", "page?p-halal": "/halal-certificates", "page?halal-certificates": "/halal-certificates", "page?photo-gallery": "/photo-gallery", "page?video-gallery": "/video-gallery", "page?events": "/news-events", "page?event-upcoming": "/latest-event", "page?faq-general": "/faq-general", "page?faq-product": "/faq-product", "page?faq-good-policy": "/faq-return-goods", "page?contact": "/contact", "page?contact-business-center": "/business-center", "page?join-us": "/join-us", "https://app.iphyto.com/member/login.aspx": "/login" } as const;
 
@@ -21,6 +32,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
   const [notice, setNotice] = useState<string>();
   const [tab, setTab] = useState("#home");
   const [panel, setPanel] = useState("collapseOne");
+  const parsed = resolveMedia(html);
   const options: HTMLReactParserOptions = {
     replace(node, index) {
       if (!(node instanceof Element)) return;
@@ -65,7 +77,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       return undefined;
     },
   };
-  return <>{parse(html, options)}{notice && <div className="reference-modal" role="dialog" aria-label="Notice" onClick={() => setNotice(undefined)}><div className="reference-modal-body"><Button variant="reference" className="close" aria-label="Close notice" onClick={() => setNotice(undefined)}>×</Button><img src={notice} alt="Notice" /></div></div>}</>;
+  return <>{parse(parsed, options)}{notice && <div className="reference-modal" role="dialog" aria-label="Notice" onClick={() => setNotice(undefined)}><div className="reference-modal-body"><Button variant="reference" className="close" aria-label="Close notice" onClick={() => setNotice(undefined)}>×</Button><img src={notice} alt="Notice" /></div></div>}</>;
 }
 
 function Banner({ page }: { page: ReferencePage }) {
