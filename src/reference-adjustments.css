@@ -8,6 +8,8 @@
 .reference-site main .page{overflow:visible}
 .reference-site .page{animation:none!important}
 .reference-site .rd-navbar{position:relative;transform:none;box-shadow:none}
+.reference-site .rd-navbar-wrap{height:auto}
+.reference-site .search-top .container>.row>.input-group{width:100%}
 .reference-site .rd-navbar-main{min-height:72px}
 .reference-site .rd-navbar-nav-wrap{flex:1;display:flex;justify-content:center}
 .reference-site .rd-navbar-nav{display:flex;gap:22px}

@@ -23,33 +23,34 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
     replace(node, index) {
       if (!(node instanceof Element)) return;
       const attrs = node.attribs;
-      const cls = attrs.class ?? "";
+      const cls = attrs["class"] ?? "";
       const children = () => domToReact(node.children as DOMNode[], options);
       if (cls.includes("alert-primary") && hidden.includes(index)) return <></>;
       if (node.name === "button") {
         const close = cls.includes("close");
-        return <Button variant="reference" size="reference" className={cls} type={attrs.type === "submit" ? "submit" : "button"} aria-label={attrs["aria-label"]} onClick={close ? (event) => { const el = event.currentTarget.closest(".alert"); if (el) (el as HTMLElement).hidden = true; setHidden([...hidden]); } : cls.includes("rd-navbar-toggle") ? () => setMenu(!menu) : cls.includes("dropdown-toggle") ? () => setLanguage(!language) : undefined}>{children()}</Button>;
+        return <Button variant="reference" size="reference" className={cls} type={attrs["type"] === "submit" ? "submit" : "button"} aria-label={attrs["aria-label"]} onClick={close ? (event) => { const el = event.currentTarget.closest(".alert"); if (el) (el as HTMLElement).hidden = true; setHidden([...hidden]); } : cls.includes("rd-navbar-toggle") ? () => setMenu(!menu) : cls.includes("dropdown-toggle") ? () => setLanguage(!language) : undefined}>{children()}</Button>;
       }
       if (cls.includes("rd-navbar-nav-wrap")) return <div className={`${cls} ${menu ? "mobile-open" : ""}`}>{children()}</div>;
       if (cls === "dropdown-menu") return <div className={`${cls} ${language ? "show" : ""}`}>{children()}</div>;
       if (cls.includes("rd-nav-item")) return <li className={cls.replace(/active/g, "") + (header ? "" : "")}>{children()}</li>;
       if (node.name === "form") return <form className="reference-search" action="https://iphyto.com/search" method="post">{children()}</form>;
       if (cls.includes("carousel-item")) {
-        const siblings = node.parent?.children.filter(n => n instanceof Element && n.attribs.class?.includes("carousel-item")) ?? [];
+        const siblings = node.parent?.children.filter(n => n instanceof Element && n.attribs["class"]?.includes("carousel-item")) ?? [];
         const slideIndex = siblings.indexOf(node);
         return <div className={`carousel-item ${announcement === slideIndex ? "active" : ""}`}>{children()}</div>;
       }
       if (cls.includes("carousel-indicators")) return <></>;
       if (cls.includes("modal fade")) return <></>;
-      if (cls.includes("collapse") && attrs.id?.startsWith("accordion1-card-body")) return <div className={`collapse ${expanded === attrs.id ? "show" : ""}`}>{children()}</div>;
+      if (cls.includes("collapse") && attrs["id"]?.startsWith("accordion1-card-body")) return <div id={attrs["id"]} className={`collapse ${expanded === attrs["id"] ? "show" : ""}`}>{children()}</div>;
       if (node.name === "a") {
-        const href = attrs.href ?? "#";
+        const href = attrs["href"] ?? "#";
         if (href in localPages) return <Link className={cls} to={localPages[href as keyof typeof localPages]}>{children()}</Link>;
-        if (attrs["data-target"]?.startsWith(".annoucement")) return <a href="#" className={cls} onClick={e => { e.preventDefault(); const img = node.children.find(n => n instanceof Element && n.name === "img"); if (img instanceof Element) setNotice(img.attribs.src); }}>{children()}</a>;
+        if (attrs["data-target"]?.startsWith(".annoucement")) return <a href="#" className={cls} onClick={e => { e.preventDefault(); const img = node.children.find(n => n instanceof Element && n.name === "img"); if (img instanceof Element) setNotice(img.attribs["src"]); }}>{children()}</a>;
         if (cls.includes("carousel-control")) return <Button variant="reference" size="reference" className={cls} aria-label={cls.includes("prev") ? "Previous announcement" : "Next announcement"} onClick={() => setAnnouncement((announcement + (cls.includes("prev") ? 9 : 1)) % 10)}>{children()}</Button>;
         if (href.startsWith("#accordion1")) return <Button variant="reference" size="reference" className={expanded === href.slice(1) ? "" : "collapsed"} aria-expanded={expanded === href.slice(1)} onClick={() => setExpanded(expanded === href.slice(1) ? "" : href.slice(1))}>{children()}</Button>;
         if (href.startsWith("page?") || href.startsWith("?")) return <a className={cls} href={`https://iphyto.com/${href.startsWith("?") ? "page" : ""}${href}`} target="_blank" rel="noreferrer">{children()}</a>;
       }
+      return undefined;
     },
   };
   return <>{parse(html, options)}{notice && <div className="reference-modal" role="dialog" aria-label="Notice" onClick={() => setNotice(undefined)}><div className="reference-modal-body"><Button variant="reference" className="close" aria-label="Close notice" onClick={() => setNotice(undefined)}>×</Button><img src={notice} alt="Notice" /></div></div>}</>;
