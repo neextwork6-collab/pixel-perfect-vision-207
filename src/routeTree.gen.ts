@@ -23,6 +23,7 @@ import { Route as FaqProductRouteImport } from './routes/faq-product'
 import { Route as FaqReturnGoodsRouteImport } from './routes/faq-return-goods'
 import { Route as FounderRouteImport } from './routes/founder'
 import { Route as HalalCertificatesRouteImport } from './routes/halal-certificates'
+import { Route as JoinUsRouteImport } from './routes/join-us'
 import { Route as LatestEventRouteImport } from './routes/latest-event'
 import { Route as MilestonesRouteImport } from './routes/milestones'
 import { Route as NewsEventsRouteImport } from './routes/news-events'
@@ -103,6 +104,11 @@ const HalalCertificatesRoute = HalalCertificatesRouteImport.update({
   path: '/halal-certificates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JoinUsRoute = JoinUsRouteImport.update({
+  id: '/join-us',
+  path: '/join-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LatestEventRoute = LatestEventRouteImport.update({
   id: '/latest-event',
   path: '/latest-event',
@@ -164,6 +170,7 @@ export interface FileRoutesByFullPath {
   '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
   '/latest-event': typeof LatestEventRoute
   '/milestones': typeof MilestonesRoute
   '/news-events': typeof NewsEventsRoute
@@ -189,6 +196,7 @@ export interface FileRoutesByTo {
   '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
   '/latest-event': typeof LatestEventRoute
   '/milestones': typeof MilestonesRoute
   '/news-events': typeof NewsEventsRoute
@@ -215,6 +223,7 @@ export interface FileRoutesById {
   '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
   '/latest-event': typeof LatestEventRoute
   '/milestones': typeof MilestonesRoute
   '/news-events': typeof NewsEventsRoute
@@ -242,6 +251,7 @@ export interface FileRouteTypes {
     | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
+    | '/join-us'
     | '/latest-event'
     | '/milestones'
     | '/news-events'
@@ -267,6 +277,7 @@ export interface FileRouteTypes {
     | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
+    | '/join-us'
     | '/latest-event'
     | '/milestones'
     | '/news-events'
@@ -292,6 +303,7 @@ export interface FileRouteTypes {
     | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
+    | '/join-us'
     | '/latest-event'
     | '/milestones'
     | '/news-events'
@@ -318,6 +330,7 @@ export interface RootRouteChildren {
   FaqReturnGoodsRoute: typeof FaqReturnGoodsRoute
   FounderRoute: typeof FounderRoute
   HalalCertificatesRoute: typeof HalalCertificatesRoute
+  JoinUsRoute: typeof JoinUsRoute
   LatestEventRoute: typeof LatestEventRoute
   MilestonesRoute: typeof MilestonesRoute
   NewsEventsRoute: typeof NewsEventsRoute
@@ -429,6 +442,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HalalCertificatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/join-us': {
+      id: '/join-us'
+      path: '/join-us'
+      fullPath: '/join-us'
+      preLoaderRoute: typeof JoinUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/latest-event': {
       id: '/latest-event'
       path: '/latest-event'
@@ -510,6 +530,7 @@ const rootRouteChildren: RootRouteChildren = {
   FaqReturnGoodsRoute: FaqReturnGoodsRoute,
   FounderRoute: FounderRoute,
   HalalCertificatesRoute: HalalCertificatesRoute,
+  JoinUsRoute: JoinUsRoute,
   LatestEventRoute: LatestEventRoute,
   MilestonesRoute: MilestonesRoute,
   NewsEventsRoute: NewsEventsRoute,
