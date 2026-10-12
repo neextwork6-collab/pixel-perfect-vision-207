@@ -12,10 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as BusinessCenterRouteImport } from './routes/business-center'
 import { Route as BusinessCollaborationRouteImport } from './routes/business-collaboration'
 import { Route as BusinessOpportunityRouteImport } from './routes/business-opportunity'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CrystalCellRouteImport } from './routes/crystal-cell'
 import { Route as DoubleStemcellRouteImport } from './routes/double-stemcell'
+import { Route as FaqGeneralRouteImport } from './routes/faq-general'
+import { Route as FaqProductRouteImport } from './routes/faq-product'
+import { Route as FaqReturnGoodsRouteImport } from './routes/faq-return-goods'
 import { Route as FounderRouteImport } from './routes/founder'
 import { Route as HalalCertificatesRouteImport } from './routes/halal-certificates'
 import { Route as LatestEventRouteImport } from './routes/latest-event'
@@ -43,6 +48,11 @@ const AwardsRoute = AwardsRouteImport.update({
   path: '/awards',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BusinessCenterRoute = BusinessCenterRouteImport.update({
+  id: '/business-center',
+  path: '/business-center',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BusinessCollaborationRoute = BusinessCollaborationRouteImport.update({
   id: '/business-collaboration',
   path: '/business-collaboration',
@@ -53,6 +63,11 @@ const BusinessOpportunityRoute = BusinessOpportunityRouteImport.update({
   path: '/business-opportunity',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CrystalCellRoute = CrystalCellRouteImport.update({
   id: '/crystal-cell',
   path: '/crystal-cell',
@@ -61,6 +76,21 @@ const CrystalCellRoute = CrystalCellRouteImport.update({
 const DoubleStemcellRoute = DoubleStemcellRouteImport.update({
   id: '/double-stemcell',
   path: '/double-stemcell',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqGeneralRoute = FaqGeneralRouteImport.update({
+  id: '/faq-general',
+  path: '/faq-general',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqProductRoute = FaqProductRouteImport.update({
+  id: '/faq-product',
+  path: '/faq-product',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqReturnGoodsRoute = FaqReturnGoodsRouteImport.update({
+  id: '/faq-return-goods',
+  path: '/faq-return-goods',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FounderRoute = FounderRouteImport.update({
@@ -123,10 +153,15 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/awards': typeof AwardsRoute
+  '/business-center': typeof BusinessCenterRoute
   '/business-collaboration': typeof BusinessCollaborationRoute
   '/business-opportunity': typeof BusinessOpportunityRoute
+  '/contact': typeof ContactRoute
   '/crystal-cell': typeof CrystalCellRoute
   '/double-stemcell': typeof DoubleStemcellRoute
+  '/faq-general': typeof FaqGeneralRoute
+  '/faq-product': typeof FaqProductRoute
+  '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
   '/latest-event': typeof LatestEventRoute
@@ -143,10 +178,15 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/awards': typeof AwardsRoute
+  '/business-center': typeof BusinessCenterRoute
   '/business-collaboration': typeof BusinessCollaborationRoute
   '/business-opportunity': typeof BusinessOpportunityRoute
+  '/contact': typeof ContactRoute
   '/crystal-cell': typeof CrystalCellRoute
   '/double-stemcell': typeof DoubleStemcellRoute
+  '/faq-general': typeof FaqGeneralRoute
+  '/faq-product': typeof FaqProductRoute
+  '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
   '/latest-event': typeof LatestEventRoute
@@ -164,10 +204,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/awards': typeof AwardsRoute
+  '/business-center': typeof BusinessCenterRoute
   '/business-collaboration': typeof BusinessCollaborationRoute
   '/business-opportunity': typeof BusinessOpportunityRoute
+  '/contact': typeof ContactRoute
   '/crystal-cell': typeof CrystalCellRoute
   '/double-stemcell': typeof DoubleStemcellRoute
+  '/faq-general': typeof FaqGeneralRoute
+  '/faq-product': typeof FaqProductRoute
+  '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
   '/latest-event': typeof LatestEventRoute
@@ -186,10 +231,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/awards'
+    | '/business-center'
     | '/business-collaboration'
     | '/business-opportunity'
+    | '/contact'
     | '/crystal-cell'
     | '/double-stemcell'
+    | '/faq-general'
+    | '/faq-product'
+    | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
     | '/latest-event'
@@ -206,10 +256,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/awards'
+    | '/business-center'
     | '/business-collaboration'
     | '/business-opportunity'
+    | '/contact'
     | '/crystal-cell'
     | '/double-stemcell'
+    | '/faq-general'
+    | '/faq-product'
+    | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
     | '/latest-event'
@@ -226,10 +281,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/awards'
+    | '/business-center'
     | '/business-collaboration'
     | '/business-opportunity'
+    | '/contact'
     | '/crystal-cell'
     | '/double-stemcell'
+    | '/faq-general'
+    | '/faq-product'
+    | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
     | '/latest-event'
@@ -247,10 +307,15 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AwardsRoute: typeof AwardsRoute
+  BusinessCenterRoute: typeof BusinessCenterRoute
   BusinessCollaborationRoute: typeof BusinessCollaborationRoute
   BusinessOpportunityRoute: typeof BusinessOpportunityRoute
+  ContactRoute: typeof ContactRoute
   CrystalCellRoute: typeof CrystalCellRoute
   DoubleStemcellRoute: typeof DoubleStemcellRoute
+  FaqGeneralRoute: typeof FaqGeneralRoute
+  FaqProductRoute: typeof FaqProductRoute
+  FaqReturnGoodsRoute: typeof FaqReturnGoodsRoute
   FounderRoute: typeof FounderRoute
   HalalCertificatesRoute: typeof HalalCertificatesRoute
   LatestEventRoute: typeof LatestEventRoute
@@ -287,6 +352,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AwardsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/business-center': {
+      id: '/business-center'
+      path: '/business-center'
+      fullPath: '/business-center'
+      preLoaderRoute: typeof BusinessCenterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/business-collaboration': {
       id: '/business-collaboration'
       path: '/business-collaboration'
@@ -301,6 +373,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessOpportunityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/crystal-cell': {
       id: '/crystal-cell'
       path: '/crystal-cell'
@@ -313,6 +392,27 @@ declare module '@tanstack/react-router' {
       path: '/double-stemcell'
       fullPath: '/double-stemcell'
       preLoaderRoute: typeof DoubleStemcellRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq-general': {
+      id: '/faq-general'
+      path: '/faq-general'
+      fullPath: '/faq-general'
+      preLoaderRoute: typeof FaqGeneralRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq-product': {
+      id: '/faq-product'
+      path: '/faq-product'
+      fullPath: '/faq-product'
+      preLoaderRoute: typeof FaqProductRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq-return-goods': {
+      id: '/faq-return-goods'
+      path: '/faq-return-goods'
+      fullPath: '/faq-return-goods'
+      preLoaderRoute: typeof FaqReturnGoodsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/founder': {
@@ -399,10 +499,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AwardsRoute: AwardsRoute,
+  BusinessCenterRoute: BusinessCenterRoute,
   BusinessCollaborationRoute: BusinessCollaborationRoute,
   BusinessOpportunityRoute: BusinessOpportunityRoute,
+  ContactRoute: ContactRoute,
   CrystalCellRoute: CrystalCellRoute,
   DoubleStemcellRoute: DoubleStemcellRoute,
+  FaqGeneralRoute: FaqGeneralRoute,
+  FaqProductRoute: FaqProductRoute,
+  FaqReturnGoodsRoute: FaqReturnGoodsRoute,
   FounderRoute: FounderRoute,
   HalalCertificatesRoute: HalalCertificatesRoute,
   LatestEventRoute: LatestEventRoute,
