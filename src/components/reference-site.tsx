@@ -6,6 +6,9 @@ import reference from "@/lib/reference-pages.json";
 import bannerOne from "@/assets/lifeos/hd/banner-1.webp";
 import bannerTwo from "@/assets/lifeos/hd/banner-2.webp";
 import bannerThree from "@/assets/lifeos/hd/banner-3.webp";
+import serviceOne from "@/assets/lifeos/high-resolution/services-01.webp.asset.json";
+import serviceTwentyOne from "@/assets/lifeos/high-resolution/services-21.webp.asset.json";
+import serviceFortyOne from "@/assets/lifeos/high-resolution/services-41.webp.asset.json";
 
 // Resolve each distinct media token to its high-resolution CDN asset.
 const lifeosTiles = import.meta.glob<{ default: { url: string } }>("/src/assets/lifeos/high-resolution/*.asset.json", { eager: true });
@@ -15,7 +18,8 @@ for (const [path, mod] of Object.entries(lifeosTiles)) {
   if (m) lifeosMedia.set(`${m[1]}/${Number(m[2])}`, mod.default.url);
 }
 function resolveMedia(html: string): string {
-  return html.replace(/lifeos-media:\/\/([a-z]+)\/(\d{2})/g, (match, group, nn) => lifeosMedia.get(`${group}/${Number(nn)}`) ?? match);
+  const heroes: Record<string, string> = { "services/1": serviceOne.url, "services/21": serviceTwentyOne.url, "services/41": serviceFortyOne.url };
+  return html.replace(/lifeos-media:\/\/([a-z]+)\/(\d{2})/g, (match, group, nn) => heroes[`${group}/${Number(nn)}`] ?? lifeosMedia.get(`${group}/${Number(nn)}`) ?? match);
 }
 
 export type ReferencePage = keyof typeof reference.pages;
