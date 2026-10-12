@@ -1,3 +1,4 @@
 - [x] Recreate and verify the first four reference pages.
-- [ ] Add Scientists, Business Collaboration, Business Opportunity, Awards, and the supplied Milestones screenshot.
-- [ ] Preserve original imagery, content, spacing and menu navigation; verify all added pages.
+- [x] Add Scientists, Business Collaboration, Business Opportunity, Awards, and restore the original Milestones timeline stylesheet.
+- [x] Preserve original imagery and content; verify all added pages load with no broken images or runtime errors.
+- [x] Recreate the five newly uploaded HTML pages plus the screenshot's Double Stemcell page; compare the four supplied screenshots and verify menu navigation and certificate viewing.

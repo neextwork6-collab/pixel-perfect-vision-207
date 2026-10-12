@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import reference from "@/lib/reference-pages.json";
 
 export type ReferencePage = keyof typeof reference.pages;
-const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management", "page?about-management": "/scientists", "page?about-business-collaboration": "/business-collaboration", "page?about-business-opportunity": "/business-opportunity", "page?about-award": "/awards", "page?about-milestones": "/milestones" } as const;
+const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management", "page?about-management": "/scientists", "page?about-business-collaboration": "/business-collaboration", "page?about-business-opportunity": "/business-opportunity", "page?about-award": "/awards", "page?about-milestones": "/milestones", "page?p-triple-stemcell-h2o-moisturizer": "/triple-stemcell-h2o", "page?p-double-stemcell": "/double-stemcell", "page?p-crystal-cell": "/crystal-cell", "page?p-videos": "/product-videos", "page?p-certificate": "/halal-certificates", "page?p-halal": "/halal-certificates", "page?halal-certificates": "/halal-certificates", "page?photo-gallery": "/photo-gallery" } as const;
 
 export function pageHead(page: ReferencePage) {
   const { title, description } = reference.pages[page];
@@ -25,6 +25,11 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       const attrs = node.attribs;
       const cls = attrs["class"] ?? "";
       const children = () => domToReact(node.children as DOMNode[], options);
+      if (node.name === "script" || node.name === "style") return <></>;
+      if (cls === "box" && attrs["data-toggle"] === "modal") {
+        const image = node.children.find(n => n instanceof Element && n.name === "img");
+        return <Button variant="reference" size="reference" className={cls} aria-label={image instanceof Element ? image.attribs["alt"] : "View certificate"} onClick={() => { if (image instanceof Element) setNotice(image.attribs["src"]); }}>{children()}</Button>;
+      }
       if (cls.includes("alert-primary") && hidden.includes(index)) return <></>;
       if (node.name === "button") {
         const close = cls.includes("close");
@@ -58,12 +63,13 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
 
 function Banner({ page }: { page: ReferencePage }) {
   const paths = ["slide-14-anniversary-2.jpg", "slide-scientist.jpg", "slide-business-for-home-top10-2024.jpg", "slide-business-for-home-2024v1.jpg", "slide-britishpedia-award.jpg", "slide-Woman-Excellence-Award.jpg", "slide-super-platinum-award.jpg", "slide-Puan-Sri-FAOL-2.jpg", "slide-AJL.jpg"];
-  const [slide, setSlide] = useState(page === "home" || page === "awards" ? 1 : page === "business-opportunity" || page === "milestones" ? 2 : 0);
+  const [slide, setSlide] = useState(page === "home" || page === "awards" || page === "product-videos" ? 1 : page === "business-opportunity" || page === "milestones" ? 2 : 0);
   const key = `iphyto2/images/${paths[slide]}` as keyof typeof reference.assets;
   const src = reference.assets[key];
   return <section className="reference-banner" aria-label="Phyto Science highlights"><img src={src ?? reference.assets["iphyto2/images/slide-14-anniversary-2.jpg"]} alt={slide === 1 ? "Phyto Science — Our Scientist Team" : "Phyto Science — Success Thru Science"} /><div className="reference-pagination">{paths.map((path, i) => <Button variant="reference" size="reference" key={path} aria-label={`Go to slide ${i + 1}`} className={i === slide ? "selected" : ""} onClick={() => setSlide(i)}>{String(i + 1).padStart(2, "0")}</Button>)}</div></section>;
 }
 
 export function ReferenceSite({ page }: { page: ReferencePage }) {
-  return <div className={`reference-site reference-${page}`}><ReferenceMarkup html={reference.header} header /><Banner key={page} page={page} /><main><ReferenceMarkup key={page} html={reference.pages[page].html} /></main><ReferenceMarkup html={reference.footer} /><Button variant="reference" size="reference" className="ui-to-top fa fa-arrow-up active" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} /></div>;
+  const product = ["triple-stemcell-h2o", "double-stemcell", "crystal-cell"].includes(page);
+  return <div className={`reference-site reference-${page} ${product ? "reference-product" : ""}`}><ReferenceMarkup html={reference.header} header />{!product && <Banner key={page} page={page} />}<main><ReferenceMarkup key={page} html={reference.pages[page].html} /></main><ReferenceMarkup html={reference.footer} /><Button variant="reference" size="reference" className="ui-to-top fa fa-arrow-up active" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} /></div>;
 }
