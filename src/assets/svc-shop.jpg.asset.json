@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "bd125b27-005c-414c-8bdb-df852b402262",
-  "project_id": "3f87ded5-9e32-4e60-a5a7-4505712a8ef0",
-  "url": "/__l5e/assets-v1/bd125b27-005c-414c-8bdb-df852b402262/svc-shop.jpg",
-  "r2_key": "a/v1/3f87ded5-9e32-4e60-a5a7-4505712a8ef0/bd125b27-005c-414c-8bdb-df852b402262/svc-shop.jpg",
-  "original_filename": "svc-shop.jpg",
-  "size": 103379,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:55:12Z"
+  "created_at": "2026-10-12T07:55:12Z",
+  "original_filename": "svc-shop.jpg",
+  "project_id": "0676f055-33f8-4bf7-ac6e-d69eebab3d57",
+  "r2_key": "a/v1/0676f055-33f8-4bf7-ac6e-d69eebab3d57/bd125b27-005c-414c-8bdb-df852b402262/svc-shop.jpg",
+  "size": 103379,
+  "url": "/__l5e/assets-v1/bd125b27-005c-414c-8bdb-df852b402262/svc-shop.jpg",
+  "version": 1
 }

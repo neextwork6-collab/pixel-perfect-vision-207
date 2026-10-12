@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "045aecbc-77f9-449b-853c-5e13c40acc0a",
-  "project_id": "3f87ded5-9e32-4e60-a5a7-4505712a8ef0",
-  "url": "/__l5e/assets-v1/045aecbc-77f9-449b-853c-5e13c40acc0a/svc-health.jpg",
-  "r2_key": "a/v1/3f87ded5-9e32-4e60-a5a7-4505712a8ef0/045aecbc-77f9-449b-853c-5e13c40acc0a/svc-health.jpg",
-  "original_filename": "svc-health.jpg",
-  "size": 92319,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:55:05Z"
+  "created_at": "2026-10-12T07:55:05Z",
+  "original_filename": "svc-health.jpg",
+  "project_id": "0676f055-33f8-4bf7-ac6e-d69eebab3d57",
+  "r2_key": "a/v1/0676f055-33f8-4bf7-ac6e-d69eebab3d57/045aecbc-77f9-449b-853c-5e13c40acc0a/svc-health.jpg",
+  "size": 92319,
+  "url": "/__l5e/assets-v1/045aecbc-77f9-449b-853c-5e13c40acc0a/svc-health.jpg",
+  "version": 1
 }
