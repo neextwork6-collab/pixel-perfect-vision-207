@@ -2,3 +2,6 @@
 - [x] Add Scientists, Business Collaboration, Business Opportunity, Awards, and restore the original Milestones timeline stylesheet.
 - [x] Preserve original imagery and content; verify all added pages load with no broken images or runtime errors.
 - [x] Recreate the five newly uploaded HTML pages plus the screenshot's Double Stemcell page; compare the four supplied screenshots and verify menu navigation and certificate viewing.
+- [x] Replace repeated placeholder media with a large distinct Life OS media library.
+- [x] Rewrite every page section with Life OS-specific labels, descriptions and sample data.
+- [ ] Verify every route on phone, tablet and desktop; fix all overflow and interaction issues.
