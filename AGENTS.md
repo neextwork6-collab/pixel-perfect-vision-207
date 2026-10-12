@@ -9,6 +9,6 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-- Render the four reference pages through a shared React HTML adapter using sanitized static content, preserving original markup for visual fidelity without executing uploaded scripts.
+- Render supplied reference pages through a shared React HTML adapter using sanitized static content, preserving original markup for visual fidelity without executing uploaded scripts.
 - Keep original-reference stylesheet colors centralized as OKLCH custom-property tokens in the global design system so the imported design remains theme-consistent.
 - Store original media with Lovable Assets and use local TanStack routes for the supplied pages; retain source-site destinations for pages not supplied.

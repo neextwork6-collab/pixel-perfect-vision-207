@@ -1,3 +1,3 @@
-- [ ] Recreate all four uploaded Phyto Science pages using their original content and visual assets.
-- [ ] Match original typography, layout, colors, header, banners, and footer without additions.
-- [ ] Verify navigation and compare rendered pages with the uploaded screenshots.
+- [x] Recreate and verify the first four reference pages.
+- [ ] Add Scientists, Business Collaboration, Business Opportunity, Awards, and the supplied Milestones screenshot.
+- [ ] Preserve original imagery, content, spacing and menu navigation; verify all added pages.

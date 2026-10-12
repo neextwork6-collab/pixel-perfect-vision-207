@@ -11,7 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as BusinessCollaborationRouteImport } from './routes/business-collaboration'
+import { Route as BusinessOpportunityRouteImport } from './routes/business-opportunity'
 import { Route as FounderRouteImport } from './routes/founder'
+import { Route as MilestonesRouteImport } from './routes/milestones'
+import { Route as ScientistsRouteImport } from './routes/scientists'
 import { Route as SeniorManagementRouteImport } from './routes/senior-management'
 
 const IndexRoute = IndexRouteImport.update({
@@ -24,9 +29,34 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessCollaborationRoute = BusinessCollaborationRouteImport.update({
+  id: '/business-collaboration',
+  path: '/business-collaboration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BusinessOpportunityRoute = BusinessOpportunityRouteImport.update({
+  id: '/business-opportunity',
+  path: '/business-opportunity',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FounderRoute = FounderRouteImport.update({
   id: '/founder',
   path: '/founder',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MilestonesRoute = MilestonesRouteImport.update({
+  id: '/milestones',
+  path: '/milestones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScientistsRoute = ScientistsRouteImport.update({
+  id: '/scientists',
+  path: '/scientists',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SeniorManagementRoute = SeniorManagementRouteImport.update({
@@ -38,34 +68,82 @@ const SeniorManagementRoute = SeniorManagementRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/awards': typeof AwardsRoute
+  '/business-collaboration': typeof BusinessCollaborationRoute
+  '/business-opportunity': typeof BusinessOpportunityRoute
   '/founder': typeof FounderRoute
+  '/milestones': typeof MilestonesRoute
+  '/scientists': typeof ScientistsRoute
   '/senior-management': typeof SeniorManagementRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/awards': typeof AwardsRoute
+  '/business-collaboration': typeof BusinessCollaborationRoute
+  '/business-opportunity': typeof BusinessOpportunityRoute
   '/founder': typeof FounderRoute
+  '/milestones': typeof MilestonesRoute
+  '/scientists': typeof ScientistsRoute
   '/senior-management': typeof SeniorManagementRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/awards': typeof AwardsRoute
+  '/business-collaboration': typeof BusinessCollaborationRoute
+  '/business-opportunity': typeof BusinessOpportunityRoute
   '/founder': typeof FounderRoute
+  '/milestones': typeof MilestonesRoute
+  '/scientists': typeof ScientistsRoute
   '/senior-management': typeof SeniorManagementRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/founder' | '/senior-management'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/awards'
+    | '/business-collaboration'
+    | '/business-opportunity'
+    | '/founder'
+    | '/milestones'
+    | '/scientists'
+    | '/senior-management'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/founder' | '/senior-management'
-  id: '__root__' | '/' | '/about' | '/founder' | '/senior-management'
+  to:
+    | '/'
+    | '/about'
+    | '/awards'
+    | '/business-collaboration'
+    | '/business-opportunity'
+    | '/founder'
+    | '/milestones'
+    | '/scientists'
+    | '/senior-management'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/awards'
+    | '/business-collaboration'
+    | '/business-opportunity'
+    | '/founder'
+    | '/milestones'
+    | '/scientists'
+    | '/senior-management'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AwardsRoute: typeof AwardsRoute
+  BusinessCollaborationRoute: typeof BusinessCollaborationRoute
+  BusinessOpportunityRoute: typeof BusinessOpportunityRoute
   FounderRoute: typeof FounderRoute
+  MilestonesRoute: typeof MilestonesRoute
+  ScientistsRoute: typeof ScientistsRoute
   SeniorManagementRoute: typeof SeniorManagementRoute
 }
 
@@ -85,11 +163,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-collaboration': {
+      id: '/business-collaboration'
+      path: '/business-collaboration'
+      fullPath: '/business-collaboration'
+      preLoaderRoute: typeof BusinessCollaborationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/business-opportunity': {
+      id: '/business-opportunity'
+      path: '/business-opportunity'
+      fullPath: '/business-opportunity'
+      preLoaderRoute: typeof BusinessOpportunityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/founder': {
       id: '/founder'
       path: '/founder'
       fullPath: '/founder'
       preLoaderRoute: typeof FounderRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/milestones': {
+      id: '/milestones'
+      path: '/milestones'
+      fullPath: '/milestones'
+      preLoaderRoute: typeof MilestonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scientists': {
+      id: '/scientists'
+      path: '/scientists'
+      fullPath: '/scientists'
+      preLoaderRoute: typeof ScientistsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/senior-management': {
@@ -105,7 +218,12 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AwardsRoute: AwardsRoute,
+  BusinessCollaborationRoute: BusinessCollaborationRoute,
+  BusinessOpportunityRoute: BusinessOpportunityRoute,
   FounderRoute: FounderRoute,
+  MilestonesRoute: MilestonesRoute,
+  ScientistsRoute: ScientistsRoute,
   SeniorManagementRoute: SeniorManagementRoute,
 }
 export const routeTree = rootRouteImport

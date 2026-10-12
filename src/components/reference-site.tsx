@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import reference from "@/lib/reference-pages.json";
 
 export type ReferencePage = keyof typeof reference.pages;
-const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management" } as const;
+const localPages = { index: "/", "page?about": "/about", "page?about-founder": "/founder", "page?about-senior-management": "/senior-management", "page?about-management": "/scientists", "page?about-business-collaboration": "/business-collaboration", "page?about-business-opportunity": "/business-opportunity", "page?about-award": "/awards", "page?about-milestones": "/milestones" } as const;
 
 export function pageHead(page: ReferencePage) {
   const { title, description } = reference.pages[page];
@@ -56,14 +56,14 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
   return <>{parse(html, options)}{notice && <div className="reference-modal" role="dialog" aria-label="Notice" onClick={() => setNotice(undefined)}><div className="reference-modal-body"><Button variant="reference" className="close" aria-label="Close notice" onClick={() => setNotice(undefined)}>×</Button><img src={notice} alt="Notice" /></div></div>}</>;
 }
 
-function Banner({ home }: { home: boolean }) {
+function Banner({ page }: { page: ReferencePage }) {
   const paths = ["slide-14-anniversary-2.jpg", "slide-scientist.jpg", "slide-business-for-home-top10-2024.jpg", "slide-business-for-home-2024v1.jpg", "slide-britishpedia-award.jpg", "slide-Woman-Excellence-Award.jpg", "slide-super-platinum-award.jpg", "slide-Puan-Sri-FAOL-2.jpg", "slide-AJL.jpg"];
-  const [slide, setSlide] = useState(home ? 1 : 0);
+  const [slide, setSlide] = useState(page === "home" || page === "awards" ? 1 : page === "business-opportunity" || page === "milestones" ? 2 : 0);
   const key = `iphyto2/images/${paths[slide]}` as keyof typeof reference.assets;
   const src = reference.assets[key];
   return <section className="reference-banner" aria-label="Phyto Science highlights"><img src={src ?? reference.assets["iphyto2/images/slide-14-anniversary-2.jpg"]} alt={slide === 1 ? "Phyto Science — Our Scientist Team" : "Phyto Science — Success Thru Science"} /><div className="reference-pagination">{paths.map((path, i) => <Button variant="reference" size="reference" key={path} aria-label={`Go to slide ${i + 1}`} className={i === slide ? "selected" : ""} onClick={() => setSlide(i)}>{String(i + 1).padStart(2, "0")}</Button>)}</div></section>;
 }
 
 export function ReferenceSite({ page }: { page: ReferencePage }) {
-  return <div className={`reference-site reference-${page}`}><ReferenceMarkup html={reference.header} header /><Banner key={page} home={page === "home"} /><main><ReferenceMarkup html={reference.pages[page].html} /></main><ReferenceMarkup html={reference.footer} /><Button variant="reference" size="reference" className="ui-to-top fa fa-arrow-up active" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} /></div>;
+  return <div className={`reference-site reference-${page}`}><ReferenceMarkup html={reference.header} header /><Banner key={page} page={page} /><main><ReferenceMarkup key={page} html={reference.pages[page].html} /></main><ReferenceMarkup html={reference.footer} /><Button variant="reference" size="reference" className="ui-to-top fa fa-arrow-up active" aria-label="Back to top" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} /></div>;
 }
