@@ -1,0 +1,3 @@
+- [ ] Recreate all four uploaded Phyto Science pages using their original content and visual assets.
+- [ ] Match original typography, layout, colors, header, banners, and footer without additions.
+- [ ] Verify navigation and compare rendered pages with the uploaded screenshots.
