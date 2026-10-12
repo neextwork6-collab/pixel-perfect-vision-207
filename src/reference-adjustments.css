@@ -116,3 +116,6 @@
 .reference-news-events .events > a { display: contents; color: inherit; }
 .reference-news-events .events img { width: 100%; }
 .reference-video-gallery h4.title { font-size: 12px; line-height: 1.4; color: var(--reference-tone-116); font-weight: 400; text-align: center; margin: 10px 0 20px; }
+.reference-site .collapse.show { visibility: visible; }
+.reference-site .panel-title { font-size: 18px; font-weight: 700; }
+.reference-site .panel-title .accordion-toggle.collapsed::after { transform: none; }
