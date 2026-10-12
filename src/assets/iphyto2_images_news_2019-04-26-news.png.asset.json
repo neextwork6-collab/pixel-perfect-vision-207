@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "fc457470-ef72-43db-8337-ce95db88821f",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/fc457470-ef72-43db-8337-ce95db88821f/iphyto2_images_news_2019-04-26-news.png",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/fc457470-ef72-43db-8337-ce95db88821f/iphyto2_images_news_2019-04-26-news.png",
-  "original_filename": "iphyto2_images_news_2019-04-26-news.png",
-  "size": 2099822,
   "content_type": "image/png",
-  "created_at": "2026-10-12T06:22:18Z"
+  "created_at": "2026-10-12T06:22:18Z",
+  "original_filename": "iphyto2_images_news_2019-04-26-news.png",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/fc457470-ef72-43db-8337-ce95db88821f/iphyto2_images_news_2019-04-26-news.png",
+  "size": 2099822,
+  "url": "/__l5e/assets-v1/fc457470-ef72-43db-8337-ce95db88821f/iphyto2_images_news_2019-04-26-news.png",
+  "version": 1
 }

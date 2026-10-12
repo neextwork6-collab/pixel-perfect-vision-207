@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "6c598ffd-a340-49ca-93e8-b12921f3dc9e",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/6c598ffd-a340-49ca-93e8-b12921f3dc9e/iphyto2_images_products_home-triple-stemcell-miracle-intense-essence.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/6c598ffd-a340-49ca-93e8-b12921f3dc9e/iphyto2_images_products_home-triple-stemcell-miracle-intense-essence.jpg",
-  "original_filename": "iphyto2_images_products_home-triple-stemcell-miracle-intense-essence.jpg",
-  "size": 95438,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:40Z"
+  "created_at": "2026-10-12T06:22:40Z",
+  "original_filename": "iphyto2_images_products_home-triple-stemcell-miracle-intense-essence.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/6c598ffd-a340-49ca-93e8-b12921f3dc9e/iphyto2_images_products_home-triple-stemcell-miracle-intense-essence.jpg",
+  "size": 95438,
+  "url": "/__l5e/assets-v1/6c598ffd-a340-49ca-93e8-b12921f3dc9e/iphyto2_images_products_home-triple-stemcell-miracle-intense-essence.jpg",
+  "version": 1
 }

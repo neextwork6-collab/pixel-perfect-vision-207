@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "ccf56e42-4cdf-4482-804a-7142c3a167d7",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/ccf56e42-4cdf-4482-804a-7142c3a167d7/iphyto2_images_about_award-18.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/ccf56e42-4cdf-4482-804a-7142c3a167d7/iphyto2_images_about_award-18.jpg",
-  "original_filename": "iphyto2_images_about_award-18.jpg",
-  "size": 606065,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:31:50Z"
+  "created_at": "2026-10-12T06:31:50Z",
+  "original_filename": "iphyto2_images_about_award-18.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/ccf56e42-4cdf-4482-804a-7142c3a167d7/iphyto2_images_about_award-18.jpg",
+  "size": 606065,
+  "url": "/__l5e/assets-v1/ccf56e42-4cdf-4482-804a-7142c3a167d7/iphyto2_images_about_award-18.jpg",
+  "version": 1
 }

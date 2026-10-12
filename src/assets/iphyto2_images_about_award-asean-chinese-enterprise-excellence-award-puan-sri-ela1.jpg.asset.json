@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "2353cbb1-99b7-470c-af0f-e75a23a1a8b2",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/2353cbb1-99b7-470c-af0f-e75a23a1a8b2/iphyto2_images_about_award-asean-chinese-enterprise-excellence-award-puan-sri-ela1.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/2353cbb1-99b7-470c-af0f-e75a23a1a8b2/iphyto2_images_about_award-asean-chinese-enterprise-excellence-award-puan-sri-ela1.jpg",
-  "original_filename": "iphyto2_images_about_award-asean-chinese-enterprise-excellence-award-puan-sri-ela1.jpg",
-  "size": 283889,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:32:05Z"
+  "created_at": "2026-10-12T06:32:05Z",
+  "original_filename": "iphyto2_images_about_award-asean-chinese-enterprise-excellence-award-puan-sri-ela1.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/2353cbb1-99b7-470c-af0f-e75a23a1a8b2/iphyto2_images_about_award-asean-chinese-enterprise-excellence-award-puan-sri-ela1.jpg",
+  "size": 283889,
+  "url": "/__l5e/assets-v1/2353cbb1-99b7-470c-af0f-e75a23a1a8b2/iphyto2_images_about_award-asean-chinese-enterprise-excellence-award-puan-sri-ela1.jpg",
+  "version": 1
 }

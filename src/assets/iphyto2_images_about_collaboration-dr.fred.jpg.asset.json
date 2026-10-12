@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b27c009f-6a09-429a-a684-bc76c5b45ab2",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/b27c009f-6a09-429a-a684-bc76c5b45ab2/iphyto2_images_about_collaboration-dr.fred.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/b27c009f-6a09-429a-a684-bc76c5b45ab2/iphyto2_images_about_collaboration-dr.fred.jpg",
-  "original_filename": "iphyto2_images_about_collaboration-dr.fred.jpg",
-  "size": 10411,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:32:09Z"
+  "created_at": "2026-10-12T06:32:09Z",
+  "original_filename": "iphyto2_images_about_collaboration-dr.fred.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/b27c009f-6a09-429a-a684-bc76c5b45ab2/iphyto2_images_about_collaboration-dr.fred.jpg",
+  "size": 10411,
+  "url": "/__l5e/assets-v1/b27c009f-6a09-429a-a684-bc76c5b45ab2/iphyto2_images_about_collaboration-dr.fred.jpg",
+  "version": 1
 }

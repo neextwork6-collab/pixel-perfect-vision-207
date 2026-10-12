@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "410c95af-13f9-4031-80ec-1e3d4c081dbe",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/410c95af-13f9-4031-80ec-1e3d4c081dbe/iphyto2_images_about-bg2.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/410c95af-13f9-4031-80ec-1e3d4c081dbe/iphyto2_images_about-bg2.jpg",
-  "original_filename": "iphyto2_images_about-bg2.jpg",
-  "size": 75676,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:05Z"
+  "created_at": "2026-10-12T06:22:05Z",
+  "original_filename": "iphyto2_images_about-bg2.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/410c95af-13f9-4031-80ec-1e3d4c081dbe/iphyto2_images_about-bg2.jpg",
+  "size": 75676,
+  "url": "/__l5e/assets-v1/410c95af-13f9-4031-80ec-1e3d4c081dbe/iphyto2_images_about-bg2.jpg",
+  "version": 1
 }

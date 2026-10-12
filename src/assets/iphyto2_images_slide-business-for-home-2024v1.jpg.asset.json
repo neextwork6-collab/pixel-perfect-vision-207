@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "d2f3e840-63de-43f0-b664-1e4e936ed96f",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/d2f3e840-63de-43f0-b664-1e4e936ed96f/iphyto2_images_slide-business-for-home-2024v1.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/d2f3e840-63de-43f0-b664-1e4e936ed96f/iphyto2_images_slide-business-for-home-2024v1.jpg",
-  "original_filename": "iphyto2_images_slide-business-for-home-2024v1.jpg",
-  "size": 178644,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:49Z"
+  "created_at": "2026-10-12T06:22:49Z",
+  "original_filename": "iphyto2_images_slide-business-for-home-2024v1.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/d2f3e840-63de-43f0-b664-1e4e936ed96f/iphyto2_images_slide-business-for-home-2024v1.jpg",
+  "size": 178644,
+  "url": "/__l5e/assets-v1/d2f3e840-63de-43f0-b664-1e4e936ed96f/iphyto2_images_slide-business-for-home-2024v1.jpg",
+  "version": 1
 }

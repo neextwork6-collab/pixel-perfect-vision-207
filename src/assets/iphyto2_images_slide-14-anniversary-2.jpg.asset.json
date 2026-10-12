@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "13bd0b62-54a1-48a0-9c86-5584a382c898",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/13bd0b62-54a1-48a0-9c86-5584a382c898/iphyto2_images_slide-14-anniversary-2.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/13bd0b62-54a1-48a0-9c86-5584a382c898/iphyto2_images_slide-14-anniversary-2.jpg",
-  "original_filename": "iphyto2_images_slide-14-anniversary-2.jpg",
-  "size": 95199,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:40Z"
+  "created_at": "2026-10-12T06:22:40Z",
+  "original_filename": "iphyto2_images_slide-14-anniversary-2.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/13bd0b62-54a1-48a0-9c86-5584a382c898/iphyto2_images_slide-14-anniversary-2.jpg",
+  "size": 95199,
+  "url": "/__l5e/assets-v1/13bd0b62-54a1-48a0-9c86-5584a382c898/iphyto2_images_slide-14-anniversary-2.jpg",
+  "version": 1
 }

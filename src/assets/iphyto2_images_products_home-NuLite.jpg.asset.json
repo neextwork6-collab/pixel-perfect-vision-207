@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "bc5adc1d-d014-4143-bcca-90a3c14304ee",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/bc5adc1d-d014-4143-bcca-90a3c14304ee/iphyto2_images_products_home-NuLite.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/bc5adc1d-d014-4143-bcca-90a3c14304ee/iphyto2_images_products_home-NuLite.jpg",
-  "original_filename": "iphyto2_images_products_home-NuLite.jpg",
-  "size": 98248,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:31Z"
+  "created_at": "2026-10-12T06:22:31Z",
+  "original_filename": "iphyto2_images_products_home-NuLite.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/bc5adc1d-d014-4143-bcca-90a3c14304ee/iphyto2_images_products_home-NuLite.jpg",
+  "size": 98248,
+  "url": "/__l5e/assets-v1/bc5adc1d-d014-4143-bcca-90a3c14304ee/iphyto2_images_products_home-NuLite.jpg",
+  "version": 1
 }

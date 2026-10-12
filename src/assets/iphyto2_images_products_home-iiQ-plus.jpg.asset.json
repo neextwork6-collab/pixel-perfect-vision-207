@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "e5c35123-6c52-4e42-a276-2c78ab3e40e0",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/e5c35123-6c52-4e42-a276-2c78ab3e40e0/iphyto2_images_products_home-iiQ-plus.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/e5c35123-6c52-4e42-a276-2c78ab3e40e0/iphyto2_images_products_home-iiQ-plus.jpg",
-  "original_filename": "iphyto2_images_products_home-iiQ-plus.jpg",
-  "size": 194230,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:40Z"
+  "created_at": "2026-10-12T06:22:40Z",
+  "original_filename": "iphyto2_images_products_home-iiQ-plus.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/e5c35123-6c52-4e42-a276-2c78ab3e40e0/iphyto2_images_products_home-iiQ-plus.jpg",
+  "size": 194230,
+  "url": "/__l5e/assets-v1/e5c35123-6c52-4e42-a276-2c78ab3e40e0/iphyto2_images_products_home-iiQ-plus.jpg",
+  "version": 1
 }

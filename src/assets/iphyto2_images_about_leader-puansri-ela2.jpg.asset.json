@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "964b7184-44ff-417f-8218-1e42c494ec48",
-  "project_id": "6dded36a-7471-421b-8b2d-8d428e56f23d",
-  "url": "/__l5e/assets-v1/964b7184-44ff-417f-8218-1e42c494ec48/iphyto2_images_about_leader-puansri-ela2.jpg",
-  "r2_key": "a/v1/6dded36a-7471-421b-8b2d-8d428e56f23d/964b7184-44ff-417f-8218-1e42c494ec48/iphyto2_images_about_leader-puansri-ela2.jpg",
-  "original_filename": "iphyto2_images_about_leader-puansri-ela2.jpg",
-  "size": 123590,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T06:22:05Z"
+  "created_at": "2026-10-12T06:22:05Z",
+  "original_filename": "iphyto2_images_about_leader-puansri-ela2.jpg",
+  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
+  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/964b7184-44ff-417f-8218-1e42c494ec48/iphyto2_images_about_leader-puansri-ela2.jpg",
+  "size": 123590,
+  "url": "/__l5e/assets-v1/964b7184-44ff-417f-8218-1e42c494ec48/iphyto2_images_about_leader-puansri-ela2.jpg",
+  "version": 1
 }
