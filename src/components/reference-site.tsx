@@ -32,7 +32,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
         return <Button variant="reference" size="reference" className={cls} aria-label={image instanceof Element ? image.attribs["alt"] : "View certificate"} onClick={() => { if (image instanceof Element) setNotice(image.attribs["src"]); }}>{children()}</Button>;
       }
       if (cls.includes("alert-primary") && hidden.includes(index)) return <></>;
-      if (cls.includes("nav-link") && attrs["data-toggle"] === "tab") { const t = attrs["data-target"]; return <Button variant="reference" size="reference" className={`nav-link ${tab === t ? "active" : ""}`} role="tab" aria-selected={tab === t} onClick={() => setTab(t)}>{children()}</Button>; }
+      if (cls.includes("nav-link") && attrs["data-toggle"] === "tab") { const t = attrs["data-target"] ?? ""; return <Button variant="reference" size="reference" className={`nav-link ${tab === t ? "active" : ""}`} role="tab" aria-selected={tab === t} onClick={() => setTab(t)}>{children()}</Button>; }
       if (cls.includes("tab-pane")) return <div id={attrs["id"]} role="tabpanel" className={`tab-pane fade ${tab === "#" + attrs["id"] ? "show active" : ""}`}>{children()}</div>;
       if (node.name === "button") {
         const close = cls.includes("close");
@@ -53,7 +53,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       if (node.name === "a") {
         const href = attrs["href"] ?? "#";
         if (href in localPages) return <Link className={cls} to={localPages[href as keyof typeof localPages]}>{children()}</Link>;
-        if (attrs["data-target"]?.startsWith(".annoucement")) return <a href="#" className={cls} onClick={e => { e.preventDefault(); const find = (ns: DOMNode[]): Element | undefined => { for (const n of ns) { if (n instanceof Element) { if (n.name === "img") return n; const r = find(n.children as DOMNode[]); if (r) return r; } } }; const img = find(node.children as DOMNode[]); if (img) setNotice(img.attribs["src"]); }}>{children()}</a>;
+        if (attrs["data-target"]?.startsWith(".annoucement")) return <a href="#" className={cls} onClick={e => { e.preventDefault(); const find = (ns: DOMNode[]): Element | undefined => { for (const n of ns) { if (n instanceof Element) { if (n.name === "img") return n; const r = find(n.children as DOMNode[]); if (r) return r; } } return undefined; }; const img = find(node.children as DOMNode[]); if (img) setNotice(img.attribs["src"]); }}>{children()}</a>;
         if (cls.includes("carousel-control")) return <Button variant="reference" size="reference" className={cls} aria-label={cls.includes("prev") ? "Previous announcement" : "Next announcement"} onClick={() => setAnnouncement((announcement + (cls.includes("prev") ? 9 : 1)) % 10)}>{children()}</Button>;
         if (href.startsWith("#accordion1")) return <Button variant="reference" size="reference" className={expanded === href.slice(1) ? "" : "collapsed"} aria-expanded={expanded === href.slice(1)} onClick={() => setExpanded(expanded === href.slice(1) ? "" : href.slice(1))}>{children()}</Button>;
         if (href.startsWith("page?") || href.startsWith("?")) return <a className={cls} href={`https://iphyto.com/${href.startsWith("?") ? "page" : ""}${href}`} target="_blank" rel="noreferrer">{children()}</a>;
