@@ -23,7 +23,9 @@ import { Route as FaqProductRouteImport } from './routes/faq-product'
 import { Route as FaqReturnGoodsRouteImport } from './routes/faq-return-goods'
 import { Route as FounderRouteImport } from './routes/founder'
 import { Route as HalalCertificatesRouteImport } from './routes/halal-certificates'
+import { Route as JoinUsRouteImport } from './routes/join-us'
 import { Route as LatestEventRouteImport } from './routes/latest-event'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as MilestonesRouteImport } from './routes/milestones'
 import { Route as NewsEventsRouteImport } from './routes/news-events'
 import { Route as PhotoGalleryRouteImport } from './routes/photo-gallery'
@@ -103,9 +105,19 @@ const HalalCertificatesRoute = HalalCertificatesRouteImport.update({
   path: '/halal-certificates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JoinUsRoute = JoinUsRouteImport.update({
+  id: '/join-us',
+  path: '/join-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LatestEventRoute = LatestEventRouteImport.update({
   id: '/latest-event',
   path: '/latest-event',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MilestonesRoute = MilestonesRouteImport.update({
@@ -164,7 +176,9 @@ export interface FileRoutesByFullPath {
   '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
   '/latest-event': typeof LatestEventRoute
+  '/login': typeof LoginRoute
   '/milestones': typeof MilestonesRoute
   '/news-events': typeof NewsEventsRoute
   '/photo-gallery': typeof PhotoGalleryRoute
@@ -189,7 +203,9 @@ export interface FileRoutesByTo {
   '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
   '/latest-event': typeof LatestEventRoute
+  '/login': typeof LoginRoute
   '/milestones': typeof MilestonesRoute
   '/news-events': typeof NewsEventsRoute
   '/photo-gallery': typeof PhotoGalleryRoute
@@ -215,7 +231,9 @@ export interface FileRoutesById {
   '/faq-return-goods': typeof FaqReturnGoodsRoute
   '/founder': typeof FounderRoute
   '/halal-certificates': typeof HalalCertificatesRoute
+  '/join-us': typeof JoinUsRoute
   '/latest-event': typeof LatestEventRoute
+  '/login': typeof LoginRoute
   '/milestones': typeof MilestonesRoute
   '/news-events': typeof NewsEventsRoute
   '/photo-gallery': typeof PhotoGalleryRoute
@@ -242,7 +260,9 @@ export interface FileRouteTypes {
     | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
+    | '/join-us'
     | '/latest-event'
+    | '/login'
     | '/milestones'
     | '/news-events'
     | '/photo-gallery'
@@ -267,7 +287,9 @@ export interface FileRouteTypes {
     | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
+    | '/join-us'
     | '/latest-event'
+    | '/login'
     | '/milestones'
     | '/news-events'
     | '/photo-gallery'
@@ -292,7 +314,9 @@ export interface FileRouteTypes {
     | '/faq-return-goods'
     | '/founder'
     | '/halal-certificates'
+    | '/join-us'
     | '/latest-event'
+    | '/login'
     | '/milestones'
     | '/news-events'
     | '/photo-gallery'
@@ -318,7 +342,9 @@ export interface RootRouteChildren {
   FaqReturnGoodsRoute: typeof FaqReturnGoodsRoute
   FounderRoute: typeof FounderRoute
   HalalCertificatesRoute: typeof HalalCertificatesRoute
+  JoinUsRoute: typeof JoinUsRoute
   LatestEventRoute: typeof LatestEventRoute
+  LoginRoute: typeof LoginRoute
   MilestonesRoute: typeof MilestonesRoute
   NewsEventsRoute: typeof NewsEventsRoute
   PhotoGalleryRoute: typeof PhotoGalleryRoute
@@ -429,11 +455,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HalalCertificatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/join-us': {
+      id: '/join-us'
+      path: '/join-us'
+      fullPath: '/join-us'
+      preLoaderRoute: typeof JoinUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/latest-event': {
       id: '/latest-event'
       path: '/latest-event'
       fullPath: '/latest-event'
       preLoaderRoute: typeof LatestEventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/milestones': {
@@ -510,7 +550,9 @@ const rootRouteChildren: RootRouteChildren = {
   FaqReturnGoodsRoute: FaqReturnGoodsRoute,
   FounderRoute: FounderRoute,
   HalalCertificatesRoute: HalalCertificatesRoute,
+  JoinUsRoute: JoinUsRoute,
   LatestEventRoute: LatestEventRoute,
+  LoginRoute: LoginRoute,
   MilestonesRoute: MilestonesRoute,
   NewsEventsRoute: NewsEventsRoute,
   PhotoGalleryRoute: PhotoGalleryRoute,
