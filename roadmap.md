@@ -1,3 +1,4 @@
 - [x] Recreate and verify the first four reference pages.
 - [ ] Add Scientists, Business Collaboration, Business Opportunity, Awards, and the supplied Milestones screenshot.
 - [ ] Preserve original imagery, content, spacing and menu navigation; verify all added pages.
+- [ ] Recreate the five newly uploaded HTML pages and compare their supplied screenshots.

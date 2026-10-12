@@ -14,10 +14,16 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as AwardsRouteImport } from './routes/awards'
 import { Route as BusinessCollaborationRouteImport } from './routes/business-collaboration'
 import { Route as BusinessOpportunityRouteImport } from './routes/business-opportunity'
+import { Route as CrystalCellRouteImport } from './routes/crystal-cell'
+import { Route as DoubleStemcellRouteImport } from './routes/double-stemcell'
 import { Route as FounderRouteImport } from './routes/founder'
+import { Route as HalalCertificatesRouteImport } from './routes/halal-certificates'
 import { Route as MilestonesRouteImport } from './routes/milestones'
+import { Route as PhotoGalleryRouteImport } from './routes/photo-gallery'
+import { Route as ProductVideosRouteImport } from './routes/product-videos'
 import { Route as ScientistsRouteImport } from './routes/scientists'
 import { Route as SeniorManagementRouteImport } from './routes/senior-management'
+import { Route as TripleStemcellH2oRouteImport } from './routes/triple-stemcell-h2o'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -44,14 +50,39 @@ const BusinessOpportunityRoute = BusinessOpportunityRouteImport.update({
   path: '/business-opportunity',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CrystalCellRoute = CrystalCellRouteImport.update({
+  id: '/crystal-cell',
+  path: '/crystal-cell',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoubleStemcellRoute = DoubleStemcellRouteImport.update({
+  id: '/double-stemcell',
+  path: '/double-stemcell',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FounderRoute = FounderRouteImport.update({
   id: '/founder',
   path: '/founder',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HalalCertificatesRoute = HalalCertificatesRouteImport.update({
+  id: '/halal-certificates',
+  path: '/halal-certificates',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MilestonesRoute = MilestonesRouteImport.update({
   id: '/milestones',
   path: '/milestones',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PhotoGalleryRoute = PhotoGalleryRouteImport.update({
+  id: '/photo-gallery',
+  path: '/photo-gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductVideosRoute = ProductVideosRouteImport.update({
+  id: '/product-videos',
+  path: '/product-videos',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ScientistsRoute = ScientistsRouteImport.update({
@@ -64,6 +95,11 @@ const SeniorManagementRoute = SeniorManagementRouteImport.update({
   path: '/senior-management',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TripleStemcellH2oRoute = TripleStemcellH2oRouteImport.update({
+  id: '/triple-stemcell-h2o',
+  path: '/triple-stemcell-h2o',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -71,10 +107,16 @@ export interface FileRoutesByFullPath {
   '/awards': typeof AwardsRoute
   '/business-collaboration': typeof BusinessCollaborationRoute
   '/business-opportunity': typeof BusinessOpportunityRoute
+  '/crystal-cell': typeof CrystalCellRoute
+  '/double-stemcell': typeof DoubleStemcellRoute
   '/founder': typeof FounderRoute
+  '/halal-certificates': typeof HalalCertificatesRoute
   '/milestones': typeof MilestonesRoute
+  '/photo-gallery': typeof PhotoGalleryRoute
+  '/product-videos': typeof ProductVideosRoute
   '/scientists': typeof ScientistsRoute
   '/senior-management': typeof SeniorManagementRoute
+  '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -82,10 +124,16 @@ export interface FileRoutesByTo {
   '/awards': typeof AwardsRoute
   '/business-collaboration': typeof BusinessCollaborationRoute
   '/business-opportunity': typeof BusinessOpportunityRoute
+  '/crystal-cell': typeof CrystalCellRoute
+  '/double-stemcell': typeof DoubleStemcellRoute
   '/founder': typeof FounderRoute
+  '/halal-certificates': typeof HalalCertificatesRoute
   '/milestones': typeof MilestonesRoute
+  '/photo-gallery': typeof PhotoGalleryRoute
+  '/product-videos': typeof ProductVideosRoute
   '/scientists': typeof ScientistsRoute
   '/senior-management': typeof SeniorManagementRoute
+  '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -94,10 +142,16 @@ export interface FileRoutesById {
   '/awards': typeof AwardsRoute
   '/business-collaboration': typeof BusinessCollaborationRoute
   '/business-opportunity': typeof BusinessOpportunityRoute
+  '/crystal-cell': typeof CrystalCellRoute
+  '/double-stemcell': typeof DoubleStemcellRoute
   '/founder': typeof FounderRoute
+  '/halal-certificates': typeof HalalCertificatesRoute
   '/milestones': typeof MilestonesRoute
+  '/photo-gallery': typeof PhotoGalleryRoute
+  '/product-videos': typeof ProductVideosRoute
   '/scientists': typeof ScientistsRoute
   '/senior-management': typeof SeniorManagementRoute
+  '/triple-stemcell-h2o': typeof TripleStemcellH2oRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -107,10 +161,16 @@ export interface FileRouteTypes {
     | '/awards'
     | '/business-collaboration'
     | '/business-opportunity'
+    | '/crystal-cell'
+    | '/double-stemcell'
     | '/founder'
+    | '/halal-certificates'
     | '/milestones'
+    | '/photo-gallery'
+    | '/product-videos'
     | '/scientists'
     | '/senior-management'
+    | '/triple-stemcell-h2o'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -118,10 +178,16 @@ export interface FileRouteTypes {
     | '/awards'
     | '/business-collaboration'
     | '/business-opportunity'
+    | '/crystal-cell'
+    | '/double-stemcell'
     | '/founder'
+    | '/halal-certificates'
     | '/milestones'
+    | '/photo-gallery'
+    | '/product-videos'
     | '/scientists'
     | '/senior-management'
+    | '/triple-stemcell-h2o'
   id:
     | '__root__'
     | '/'
@@ -129,10 +195,16 @@ export interface FileRouteTypes {
     | '/awards'
     | '/business-collaboration'
     | '/business-opportunity'
+    | '/crystal-cell'
+    | '/double-stemcell'
     | '/founder'
+    | '/halal-certificates'
     | '/milestones'
+    | '/photo-gallery'
+    | '/product-videos'
     | '/scientists'
     | '/senior-management'
+    | '/triple-stemcell-h2o'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -141,10 +213,16 @@ export interface RootRouteChildren {
   AwardsRoute: typeof AwardsRoute
   BusinessCollaborationRoute: typeof BusinessCollaborationRoute
   BusinessOpportunityRoute: typeof BusinessOpportunityRoute
+  CrystalCellRoute: typeof CrystalCellRoute
+  DoubleStemcellRoute: typeof DoubleStemcellRoute
   FounderRoute: typeof FounderRoute
+  HalalCertificatesRoute: typeof HalalCertificatesRoute
   MilestonesRoute: typeof MilestonesRoute
+  PhotoGalleryRoute: typeof PhotoGalleryRoute
+  ProductVideosRoute: typeof ProductVideosRoute
   ScientistsRoute: typeof ScientistsRoute
   SeniorManagementRoute: typeof SeniorManagementRoute
+  TripleStemcellH2oRoute: typeof TripleStemcellH2oRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -184,6 +262,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BusinessOpportunityRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/crystal-cell': {
+      id: '/crystal-cell'
+      path: '/crystal-cell'
+      fullPath: '/crystal-cell'
+      preLoaderRoute: typeof CrystalCellRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/double-stemcell': {
+      id: '/double-stemcell'
+      path: '/double-stemcell'
+      fullPath: '/double-stemcell'
+      preLoaderRoute: typeof DoubleStemcellRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/founder': {
       id: '/founder'
       path: '/founder'
@@ -191,11 +283,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FounderRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/halal-certificates': {
+      id: '/halal-certificates'
+      path: '/halal-certificates'
+      fullPath: '/halal-certificates'
+      preLoaderRoute: typeof HalalCertificatesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/milestones': {
       id: '/milestones'
       path: '/milestones'
       fullPath: '/milestones'
       preLoaderRoute: typeof MilestonesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/photo-gallery': {
+      id: '/photo-gallery'
+      path: '/photo-gallery'
+      fullPath: '/photo-gallery'
+      preLoaderRoute: typeof PhotoGalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/product-videos': {
+      id: '/product-videos'
+      path: '/product-videos'
+      fullPath: '/product-videos'
+      preLoaderRoute: typeof ProductVideosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/scientists': {
@@ -212,6 +325,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SeniorManagementRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/triple-stemcell-h2o': {
+      id: '/triple-stemcell-h2o'
+      path: '/triple-stemcell-h2o'
+      fullPath: '/triple-stemcell-h2o'
+      preLoaderRoute: typeof TripleStemcellH2oRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -221,10 +341,16 @@ const rootRouteChildren: RootRouteChildren = {
   AwardsRoute: AwardsRoute,
   BusinessCollaborationRoute: BusinessCollaborationRoute,
   BusinessOpportunityRoute: BusinessOpportunityRoute,
+  CrystalCellRoute: CrystalCellRoute,
+  DoubleStemcellRoute: DoubleStemcellRoute,
   FounderRoute: FounderRoute,
+  HalalCertificatesRoute: HalalCertificatesRoute,
   MilestonesRoute: MilestonesRoute,
+  PhotoGalleryRoute: PhotoGalleryRoute,
+  ProductVideosRoute: ProductVideosRoute,
   ScientistsRoute: ScientistsRoute,
   SeniorManagementRoute: SeniorManagementRoute,
+  TripleStemcellH2oRoute: TripleStemcellH2oRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
