@@ -68,6 +68,7 @@
 .reference-site .card-title button{display:block;text-align:left;position:relative;width:100%;padding-left:60px;min-height:36px;background:none;border:0;color:inherit;cursor:pointer;font:inherit}
 .reference-site .card-title button .card-arrow{left:0;right:auto}
 .reference-site .post-creative-title{font:400 16px/1.6 Poppins,sans-serif}
+.reference-site .post.block-1{height:auto;block-size:auto}
 .reference-site .post-creative-time{font-size:12px}
 .reference-site .reference-modal{position:fixed;inset:0;background:var(--reference-tone-30);z-index:2000;display:grid;place-items:center;padding:30px}
 .reference-site .reference-modal-body{background:var(--background);padding:20px;max-width:850px;max-height:95vh;overflow:auto}
