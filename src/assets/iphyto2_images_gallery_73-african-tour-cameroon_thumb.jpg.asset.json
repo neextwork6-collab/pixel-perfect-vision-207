@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "50d22bd2-87cb-4eeb-972c-53b8968de4bd",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/50d22bd2-87cb-4eeb-972c-53b8968de4bd/iphyto2_images_gallery_73-african-tour-cameroon_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/50d22bd2-87cb-4eeb-972c-53b8968de4bd/iphyto2_images_gallery_73-african-tour-cameroon_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_73-african-tour-cameroon_thumb.jpg",
-  "size": 39853,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:29Z"
+  "created_at": "2026-10-12T07:07:29Z",
+  "original_filename": "iphyto2_images_gallery_73-african-tour-cameroon_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/50d22bd2-87cb-4eeb-972c-53b8968de4bd/iphyto2_images_gallery_73-african-tour-cameroon_thumb.jpg",
+  "size": 39853,
+  "url": "/__l5e/assets-v1/50d22bd2-87cb-4eeb-972c-53b8968de4bd/iphyto2_images_gallery_73-african-tour-cameroon_thumb.jpg",
+  "version": 1
 }

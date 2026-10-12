@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "16301899-a8a5-4a5f-9355-4206e440c4b2",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/16301899-a8a5-4a5f-9355-4206e440c4b2/iphyto2_images_gallery_52-Chinese-New-Year-Event-11022023_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/16301899-a8a5-4a5f-9355-4206e440c4b2/iphyto2_images_gallery_52-Chinese-New-Year-Event-11022023_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_52-Chinese-New-Year-Event-11022023_thumb.jpg",
-  "size": 127355,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:11Z"
+  "created_at": "2026-10-12T07:07:11Z",
+  "original_filename": "iphyto2_images_gallery_52-Chinese-New-Year-Event-11022023_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/16301899-a8a5-4a5f-9355-4206e440c4b2/iphyto2_images_gallery_52-Chinese-New-Year-Event-11022023_thumb.jpg",
+  "size": 127355,
+  "url": "/__l5e/assets-v1/16301899-a8a5-4a5f-9355-4206e440c4b2/iphyto2_images_gallery_52-Chinese-New-Year-Event-11022023_thumb.jpg",
+  "version": 1
 }

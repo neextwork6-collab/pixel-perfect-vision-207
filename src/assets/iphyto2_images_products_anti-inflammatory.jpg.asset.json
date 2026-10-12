@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b16894cf-7b7c-41c2-9e60-d1bddbead113",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/b16894cf-7b7c-41c2-9e60-d1bddbead113/iphyto2_images_products_anti-inflammatory.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/b16894cf-7b7c-41c2-9e60-d1bddbead113/iphyto2_images_products_anti-inflammatory.jpg",
-  "original_filename": "iphyto2_images_products_anti-inflammatory.jpg",
-  "size": 89222,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:58Z"
+  "created_at": "2026-10-12T07:07:58Z",
+  "original_filename": "iphyto2_images_products_anti-inflammatory.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/b16894cf-7b7c-41c2-9e60-d1bddbead113/iphyto2_images_products_anti-inflammatory.jpg",
+  "size": 89222,
+  "url": "/__l5e/assets-v1/b16894cf-7b7c-41c2-9e60-d1bddbead113/iphyto2_images_products_anti-inflammatory.jpg",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "9a1ec786-7b49-4418-acec-4a62ce567299",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/9a1ec786-7b49-4418-acec-4a62ce567299/iphyto2_images_packaging_double-stemcell-packaging-malaysia-front.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/9a1ec786-7b49-4418-acec-4a62ce567299/iphyto2_images_packaging_double-stemcell-packaging-malaysia-front.jpg",
-  "original_filename": "iphyto2_images_packaging_double-stemcell-packaging-malaysia-front.jpg",
-  "size": 60067,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:58Z"
+  "created_at": "2026-10-12T07:07:58Z",
+  "original_filename": "iphyto2_images_packaging_double-stemcell-packaging-malaysia-front.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/9a1ec786-7b49-4418-acec-4a62ce567299/iphyto2_images_packaging_double-stemcell-packaging-malaysia-front.jpg",
+  "size": 60067,
+  "url": "/__l5e/assets-v1/9a1ec786-7b49-4418-acec-4a62ce567299/iphyto2_images_packaging_double-stemcell-packaging-malaysia-front.jpg",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "ee5f77c7-d64e-42fd-a7ec-a0781cd90765",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/ee5f77c7-d64e-42fd-a7ec-a0781cd90765/iphyto2_images_logos-triple-stemcell.png",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/ee5f77c7-d64e-42fd-a7ec-a0781cd90765/iphyto2_images_logos-triple-stemcell.png",
-  "original_filename": "iphyto2_images_logos-triple-stemcell.png",
-  "size": 4855,
   "content_type": "image/png",
-  "created_at": "2026-10-12T07:07:51Z"
+  "created_at": "2026-10-12T07:07:51Z",
+  "original_filename": "iphyto2_images_logos-triple-stemcell.png",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/ee5f77c7-d64e-42fd-a7ec-a0781cd90765/iphyto2_images_logos-triple-stemcell.png",
+  "size": 4855,
+  "url": "/__l5e/assets-v1/ee5f77c7-d64e-42fd-a7ec-a0781cd90765/iphyto2_images_logos-triple-stemcell.png",
+  "version": 1
 }

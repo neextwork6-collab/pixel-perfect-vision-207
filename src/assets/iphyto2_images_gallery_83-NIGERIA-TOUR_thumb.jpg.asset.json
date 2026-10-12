@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "b34d6815-53e1-4e85-844c-f2945418cc41",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/b34d6815-53e1-4e85-844c-f2945418cc41/iphyto2_images_gallery_83-NIGERIA-TOUR_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/b34d6815-53e1-4e85-844c-f2945418cc41/iphyto2_images_gallery_83-NIGERIA-TOUR_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_83-NIGERIA-TOUR_thumb.jpg",
-  "size": 102816,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:45Z"
+  "created_at": "2026-10-12T07:07:45Z",
+  "original_filename": "iphyto2_images_gallery_83-NIGERIA-TOUR_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/b34d6815-53e1-4e85-844c-f2945418cc41/iphyto2_images_gallery_83-NIGERIA-TOUR_thumb.jpg",
+  "size": 102816,
+  "url": "/__l5e/assets-v1/b34d6815-53e1-4e85-844c-f2945418cc41/iphyto2_images_gallery_83-NIGERIA-TOUR_thumb.jpg",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "3f001314-47af-4ecf-85fa-6afd6ef2b60f",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/3f001314-47af-4ecf-85fa-6afd6ef2b60f/iphyto2_images_gallery_81-Exclusive-Dinner-at-Park-Hyatt-Merdeka-118_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/3f001314-47af-4ecf-85fa-6afd6ef2b60f/iphyto2_images_gallery_81-Exclusive-Dinner-at-Park-Hyatt-Merdeka-118_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_81-Exclusive-Dinner-at-Park-Hyatt-Merdeka-118_thumb.jpg",
-  "size": 55890,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:38Z"
+  "created_at": "2026-10-12T07:07:38Z",
+  "original_filename": "iphyto2_images_gallery_81-Exclusive-Dinner-at-Park-Hyatt-Merdeka-118_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/3f001314-47af-4ecf-85fa-6afd6ef2b60f/iphyto2_images_gallery_81-Exclusive-Dinner-at-Park-Hyatt-Merdeka-118_thumb.jpg",
+  "size": 55890,
+  "url": "/__l5e/assets-v1/3f001314-47af-4ecf-85fa-6afd6ef2b60f/iphyto2_images_gallery_81-Exclusive-Dinner-at-Park-Hyatt-Merdeka-118_thumb.jpg",
+  "version": 1
 }

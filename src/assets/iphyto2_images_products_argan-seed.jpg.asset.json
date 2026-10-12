@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "5d1e418f-6a59-4a81-b754-5facd7b3eb5e",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/5d1e418f-6a59-4a81-b754-5facd7b3eb5e/iphyto2_images_products_argan-seed.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/5d1e418f-6a59-4a81-b754-5facd7b3eb5e/iphyto2_images_products_argan-seed.jpg",
-  "original_filename": "iphyto2_images_products_argan-seed.jpg",
-  "size": 91668,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:58Z"
+  "created_at": "2026-10-12T07:07:58Z",
+  "original_filename": "iphyto2_images_products_argan-seed.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/5d1e418f-6a59-4a81-b754-5facd7b3eb5e/iphyto2_images_products_argan-seed.jpg",
+  "size": 91668,
+  "url": "/__l5e/assets-v1/5d1e418f-6a59-4a81-b754-5facd7b3eb5e/iphyto2_images_products_argan-seed.jpg",
+  "version": 1
 }

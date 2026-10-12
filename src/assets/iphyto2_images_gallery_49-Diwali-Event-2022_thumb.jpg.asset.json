@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "57a9d1fc-a286-4ed7-9320-4e6c286a2fb7",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/57a9d1fc-a286-4ed7-9320-4e6c286a2fb7/iphyto2_images_gallery_49-Diwali-Event-2022_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/57a9d1fc-a286-4ed7-9320-4e6c286a2fb7/iphyto2_images_gallery_49-Diwali-Event-2022_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_49-Diwali-Event-2022_thumb.jpg",
-  "size": 69279,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:11Z"
+  "created_at": "2026-10-12T07:07:11Z",
+  "original_filename": "iphyto2_images_gallery_49-Diwali-Event-2022_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/57a9d1fc-a286-4ed7-9320-4e6c286a2fb7/iphyto2_images_gallery_49-Diwali-Event-2022_thumb.jpg",
+  "size": 69279,
+  "url": "/__l5e/assets-v1/57a9d1fc-a286-4ed7-9320-4e6c286a2fb7/iphyto2_images_gallery_49-Diwali-Event-2022_thumb.jpg",
+  "version": 1
 }

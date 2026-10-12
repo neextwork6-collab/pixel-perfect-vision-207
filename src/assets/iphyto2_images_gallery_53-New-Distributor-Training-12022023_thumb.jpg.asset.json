@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "afb98faa-54ca-404d-ad70-a3406cef9ab6",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/afb98faa-54ca-404d-ad70-a3406cef9ab6/iphyto2_images_gallery_53-New-Distributor-Training-12022023_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/afb98faa-54ca-404d-ad70-a3406cef9ab6/iphyto2_images_gallery_53-New-Distributor-Training-12022023_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_53-New-Distributor-Training-12022023_thumb.jpg",
-  "size": 111853,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:11Z"
+  "created_at": "2026-10-12T07:07:11Z",
+  "original_filename": "iphyto2_images_gallery_53-New-Distributor-Training-12022023_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/afb98faa-54ca-404d-ad70-a3406cef9ab6/iphyto2_images_gallery_53-New-Distributor-Training-12022023_thumb.jpg",
+  "size": 111853,
+  "url": "/__l5e/assets-v1/afb98faa-54ca-404d-ad70-a3406cef9ab6/iphyto2_images_gallery_53-New-Distributor-Training-12022023_thumb.jpg",
+  "version": 1
 }

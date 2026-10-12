@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "4eed23c9-01ba-4f3d-89d1-2291d7c953d2",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/4eed23c9-01ba-4f3d-89d1-2291d7c953d2/iphyto2_images_gallery_21-CSR-at-Rumah-Bakti-Al-Kaushar-Bandar-Baru-Bangi-on-18-February-2021_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/4eed23c9-01ba-4f3d-89d1-2291d7c953d2/iphyto2_images_gallery_21-CSR-at-Rumah-Bakti-Al-Kaushar-Bandar-Baru-Bangi-on-18-February-2021_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_21-CSR-at-Rumah-Bakti-Al-Kaushar-Bandar-Baru-Bangi-on-18-February-2021_thumb.jpg",
-  "size": 53354,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:06:52Z"
+  "created_at": "2026-10-12T07:06:52Z",
+  "original_filename": "iphyto2_images_gallery_21-CSR-at-Rumah-Bakti-Al-Kaushar-Bandar-Baru-Bangi-on-18-February-2021_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/4eed23c9-01ba-4f3d-89d1-2291d7c953d2/iphyto2_images_gallery_21-CSR-at-Rumah-Bakti-Al-Kaushar-Bandar-Baru-Bangi-on-18-February-2021_thumb.jpg",
+  "size": 53354,
+  "url": "/__l5e/assets-v1/4eed23c9-01ba-4f3d-89d1-2291d7c953d2/iphyto2_images_gallery_21-CSR-at-Rumah-Bakti-Al-Kaushar-Bandar-Baru-Bangi-on-18-February-2021_thumb.jpg",
+  "version": 1
 }

@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "11d2af6a-f6bb-40f8-9faa-cfa5c135a08d",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/11d2af6a-f6bb-40f8-9faa-cfa5c135a08d/iphyto2_images_logo-mibelle-group.png",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/11d2af6a-f6bb-40f8-9faa-cfa5c135a08d/iphyto2_images_logo-mibelle-group.png",
-  "original_filename": "iphyto2_images_logo-mibelle-group.png",
-  "size": 21827,
   "content_type": "image/png",
-  "created_at": "2026-10-12T07:07:51Z"
+  "created_at": "2026-10-12T07:07:51Z",
+  "original_filename": "iphyto2_images_logo-mibelle-group.png",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/11d2af6a-f6bb-40f8-9faa-cfa5c135a08d/iphyto2_images_logo-mibelle-group.png",
+  "size": 21827,
+  "url": "/__l5e/assets-v1/11d2af6a-f6bb-40f8-9faa-cfa5c135a08d/iphyto2_images_logo-mibelle-group.png",
+  "version": 1
 }

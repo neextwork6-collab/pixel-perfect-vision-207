@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "c3d40a62-46ca-41bc-a578-8678e01bf4d9",
-  "project_id": "81f3f9cb-273f-455e-adcb-a38660aff1fd",
-  "url": "/__l5e/assets-v1/c3d40a62-46ca-41bc-a578-8678e01bf4d9/iphyto2_images_gallery_78-Team-building-4.10.2025_thumb.jpg",
-  "r2_key": "a/v1/81f3f9cb-273f-455e-adcb-a38660aff1fd/c3d40a62-46ca-41bc-a578-8678e01bf4d9/iphyto2_images_gallery_78-Team-building-4.10.2025_thumb.jpg",
-  "original_filename": "iphyto2_images_gallery_78-Team-building-4.10.2025_thumb.jpg",
-  "size": 59700,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-12T07:07:38Z"
+  "created_at": "2026-10-12T07:07:38Z",
+  "original_filename": "iphyto2_images_gallery_78-Team-building-4.10.2025_thumb.jpg",
+  "project_id": "8617c793-75a1-4acb-8fa3-6d5360f45154",
+  "r2_key": "a/v1/8617c793-75a1-4acb-8fa3-6d5360f45154/c3d40a62-46ca-41bc-a578-8678e01bf4d9/iphyto2_images_gallery_78-Team-building-4.10.2025_thumb.jpg",
+  "size": 59700,
+  "url": "/__l5e/assets-v1/c3d40a62-46ca-41bc-a578-8678e01bf4d9/iphyto2_images_gallery_78-Team-building-4.10.2025_thumb.jpg",
+  "version": 1
 }
