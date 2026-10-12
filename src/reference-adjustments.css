@@ -15,6 +15,7 @@
 .reference-site .rd-navbar-nav{display:flex;gap:22px}
 .reference-site .rd-navbar-static .rd-nav-item+.rd-nav-item{margin-left:0}
 .reference-site .rd-nav-item{position:relative}
+.reference-site .rd-nav-item:has(>.rd-navbar-megamenu){position:static}
 .reference-site .rd-nav-item:hover>.rd-menu,.reference-site .rd-nav-item:focus-within>.rd-menu{opacity:1;visibility:visible;transform:none;pointer-events:auto}
 .reference-site .rd-nav-item>.rd-menu,.reference-site .rd-navbar-megamenu{background:var(--reference-tone-3)}
 .reference-site .rd-menu::after{z-index:auto}
