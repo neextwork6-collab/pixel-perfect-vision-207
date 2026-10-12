@@ -32,6 +32,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
   const [notice, setNotice] = useState<string>();
   const [tab, setTab] = useState("#home");
   const [panel, setPanel] = useState("collapseOne");
+  const parsed = resolveMedia(html);
   const options: HTMLReactParserOptions = {
     replace(node, index) {
       if (!(node instanceof Element)) return;
