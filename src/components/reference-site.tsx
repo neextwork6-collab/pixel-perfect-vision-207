@@ -44,7 +44,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
       if (cls.includes("rd-nav-item")) return <li className={cls.replace(/active/g, "") + (header ? "" : "")}>{children()}</li>;
       if (cls.includes("panel-collapse")) return <div id={attrs["id"]} className={`panel-collapse collapse ${attrs["id"] && panel === attrs["id"] ? "show" : ""}`}>{children()}</div>;
       if (node.name === "form" && (cls.includes("contactForm") || cls.includes("registerForm"))) return <form className={cls} onSubmit={e => e.preventDefault()}>{children()}</form>;
-      if (node.name === "form") return <form className="reference-search" action="https://iphyto.com/search" method="post">{children()}</form>;
+      if (node.name === "form") return <form className="reference-search" action="#" method="post">{children()}</form>;
       if (cls.includes("carousel-item")) {
         const siblings = node.parent?.children.filter(n => n instanceof Element && n.attribs["class"]?.includes("carousel-item")) ?? [];
         const slideIndex = siblings.indexOf(node);
@@ -60,7 +60,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
         if (attrs["data-target"]?.startsWith(".annoucement")) return <a href="#" className={cls} onClick={e => { e.preventDefault(); const find = (ns: DOMNode[]): Element | undefined => { for (const n of ns) { if (n instanceof Element) { if (n.name === "img") return n; const r = find(n.children as DOMNode[]); if (r) return r; } } return undefined; }; const img = find(node.children as DOMNode[]); if (img) setNotice(img.attribs["src"]); }}>{children()}</a>;
         if (cls.includes("carousel-control")) return <Button variant="reference" size="reference" className={cls} aria-label={cls.includes("prev") ? "Previous announcement" : "Next announcement"} onClick={() => setAnnouncement((announcement + (cls.includes("prev") ? 9 : 1)) % 10)}>{children()}</Button>;
         if (href.startsWith("#accordion1")) return <Button variant="reference" size="reference" className={expanded === href.slice(1) ? "" : "collapsed"} aria-expanded={expanded === href.slice(1)} onClick={() => setExpanded(expanded === href.slice(1) ? "" : href.slice(1))}>{children()}</Button>;
-        if (href.startsWith("page?") || href.startsWith("?")) return <a className={cls} href={`https://iphyto.com/${href.startsWith("?") ? "page" : ""}${href}`} target="_blank" rel="noreferrer">{children()}</a>;
+        if (href.startsWith("page?") || href.startsWith("?")) return <a className={cls} href="#">{children()}</a>;
       }
       return undefined;
     },
@@ -69,11 +69,9 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
 }
 
 function Banner({ page }: { page: ReferencePage }) {
-  const paths = ["slide-14-anniversary-2.jpg", "slide-scientist.jpg", "slide-business-for-home-top10-2024.jpg", "slide-business-for-home-2024v1.jpg", "slide-britishpedia-award.jpg", "slide-Woman-Excellence-Award.jpg", "slide-super-platinum-award.jpg", "slide-Puan-Sri-FAOL-2.jpg", "slide-AJL.jpg"];
-  const [slide, setSlide] = useState(page === "home" || page === "awards" || page === "product-videos" || page === "latest-event" || page === "news-events" ? 1 : page === "business-opportunity" || page === "milestones" || page === "video-gallery" ? 2 : 0);
-  const key = `iphyto2/images/${paths[slide]}` as keyof typeof reference.assets;
-  const src = reference.assets[key];
-  return <section className="reference-banner" aria-label="Phyto Science highlights"><img src={src ?? reference.assets["iphyto2/images/slide-14-anniversary-2.jpg"]} alt={slide === 1 ? "Phyto Science — Our Scientist Team" : "Phyto Science — Success Thru Science"} /><div className="reference-pagination">{paths.map((path, i) => <Button variant="reference" size="reference" key={path} aria-label={`Go to slide ${i + 1}`} className={i === slide ? "selected" : ""} onClick={() => setSlide(i)}>{String(i + 1).padStart(2, "0")}</Button>)}</div></section>;
+  const slides = reference.slides as string[];
+  const [slide, setSlide] = useState(page === "home" ? 0 : page === "awards" || page === "news-events" || page === "business-opportunity" ? 2 : 1);
+  return <section className="reference-banner" aria-label="Life OS highlights"><img src={slides[slide]} alt="Life OS — One Life ID. One App. Unlimited Services." /><div className="reference-pagination">{slides.map((path, i) => <Button variant="reference" size="reference" key={path} aria-label={`Go to slide ${i + 1}`} className={i === slide ? "selected" : ""} onClick={() => setSlide(i)}>{String(i + 1).padStart(2, "0")}</Button>)}</div></section>;
 }
 
 export function ReferenceSite({ page }: { page: ReferencePage }) {
