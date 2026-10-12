@@ -3,13 +3,16 @@ import { Link } from "@tanstack/react-router";
 import parse, { domToReact, Element, type DOMNode, type HTMLReactParserOptions } from "html-react-parser";
 import { Button } from "@/components/ui/button";
 import reference from "@/lib/reference-pages.json";
+import bannerOne from "@/assets/lifeos/hd/banner-1.webp";
+import bannerTwo from "@/assets/lifeos/hd/banner-2.webp";
+import bannerThree from "@/assets/lifeos/hd/banner-3.webp";
 
-// Resolve every generated Life OS media token (lifeos-media://group/nn) to its bundled image URL.
-const lifeosTiles = import.meta.glob<{ default: string }>("/src/assets/lifeos/generated/*.webp", { eager: true });
+// Resolve each distinct media token to its high-resolution CDN asset.
+const lifeosTiles = import.meta.glob<{ default: { url: string } }>("/src/assets/lifeos/high-resolution/*.asset.json", { eager: true });
 const lifeosMedia = new Map<string, string>();
 for (const [path, mod] of Object.entries(lifeosTiles)) {
-  const m = path.match(/generated\/([a-z]+)-(\d+)\.webp$/);
-  if (m) lifeosMedia.set(`${m[1]}/${Number(m[2])}`, mod.default);
+  const m = path.match(/high-resolution\/([a-z]+)-(\d+)\.webp\.asset\.json$/);
+  if (m) lifeosMedia.set(`${m[1]}/${Number(m[2])}`, mod.default.url);
 }
 function resolveMedia(html: string): string {
   return html.replace(/lifeos-media:\/\/([a-z]+)\/(\d{2})/g, (match, group, nn) => lifeosMedia.get(`${group}/${Number(nn)}`) ?? match);
@@ -81,7 +84,7 @@ function ReferenceMarkup({ html, header = false }: { html: string; header?: bool
 }
 
 function Banner({ page }: { page: ReferencePage }) {
-  const slides = reference.slides as string[];
+  const slides = [bannerOne, bannerTwo, bannerThree];
   const [slide, setSlide] = useState(page === "home" ? 0 : page === "awards" || page === "news-events" || page === "business-opportunity" ? 2 : 1);
   return <section className="reference-banner" aria-label="Life OS highlights"><img src={slides[slide]} alt="Life OS — One Life ID. One App. Unlimited Services." /><div className="reference-pagination">{slides.map((path, i) => <Button variant="reference" size="reference" key={path} aria-label={`Go to slide ${i + 1}`} className={i === slide ? "selected" : ""} onClick={() => setSlide(i)}>{String(i + 1).padStart(2, "0")}</Button>)}</div></section>;
 }

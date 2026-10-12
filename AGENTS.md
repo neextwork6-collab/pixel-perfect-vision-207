@@ -13,3 +13,4 @@
 - Keep original-reference stylesheet colors centralized as OKLCH custom-property tokens in the global design system so the imported design remains theme-consistent.
 - Store original media with Lovable Assets and use local TanStack routes for the supplied pages; retain source-site destinations for pages not supplied.
 - Product references retain their supplied product banners instead of the shared slideshow so their original page structure stays intact.
+- Resolve Life OS media tokens through the high-resolution CDN pointer library, keeping distinct identities and the original layout while avoiding stretched low-resolution tiles.
